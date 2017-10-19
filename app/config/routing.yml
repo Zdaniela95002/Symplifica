@@ -1,0 +1,4 @@
+zdc_user:
+    resource: "@ZdcUserBundle/Resources/config/routing.yml"
+    prefix:   /
+

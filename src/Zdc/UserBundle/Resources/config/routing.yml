@@ -1,0 +1,41 @@
+zdc_user_homepage:
+    path:   /hello/{name}
+    defaults: { _controller: ZdcUserBundle:Default:index }
+
+zdc_user_index:
+    path:   /user/index
+    defaults: { _controller: ZdcUserBundle:User:index }
+
+zdc_user_add:
+    path:     /user/add
+    defaults: { _controller: ZdcUserBundle:User:add }
+
+zdc_user_create:
+    path:     /user/create
+    defaults: { _controller: ZdcUserBundle:User:create }
+    methods:  POST
+
+zdc_user_view:
+    path:   /user/view/{id}
+    defaults: { _controller: ZdcUserBundle:User:view }
+
+zdc_user_delete:
+    path:   /user/delete/{id}
+    defaults: { _controller: ZdcUserBundle:User:delete }
+    methods:  [POST, DELETE]
+
+zdc_user_redirect_add:
+    path:   /user/create
+    defaults:
+        _controller: ZdcUserBundle:User:add
+        path: /add
+        permanent: true
+
+zdc_user_edit:
+    path:     /user/zdc/{id}
+    defaults: { _controller: ZdcUserBundle:User:edit }
+
+zdc_user_update:
+    path:     /user/update/{id}
+    defaults: { _controller: ZdcUserBundle:User:update }
+    methods:  [POST, PUT]
